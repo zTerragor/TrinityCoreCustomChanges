@@ -21,12 +21,11 @@ void AddLfgSoloScripts();
 void AddSolocraftScripts();
 void AddCustomScripts();
 void AddSC_AutoBalance()
-
+void AddSC_skip_StarterArea();
 {
     AddSolocraftScripts();
     AddLfgSoloScripts();
     AddSC_AutoBalance();
-
+    AddSC_skip_StarterArea();
 
 {
-    
