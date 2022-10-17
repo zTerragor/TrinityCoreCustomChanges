@@ -16,12 +16,17 @@
  */
 
 // This is where scripts' loading functions should be declared:
+
 void AddLfgSoloScripts();
 void AddSolocraftScripts();
 void AddCustomScripts();
+void AddSC_AutoBalance()
 
 {
     AddSolocraftScripts();
     AddLfgSoloScripts();
+    AddSC_AutoBalance();
 
-}
+
+{
+    
