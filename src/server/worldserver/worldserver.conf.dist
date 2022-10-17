@@ -4149,9 +4149,8 @@ Metric.OverallStatusInterval = 1
 
 #
 ###################################################################################################
-
-###################################################################################################
 # SOLO LFG
+###################################################################################################
 #
 #    SoloLFG.Enable
 #        Description: Enable the module.
@@ -4369,9 +4368,6 @@ AutoBalance.DisabledID = ""
 #        Start with level 58 DK with Runeforging.
 #
 #    Skip.Deathknight.Starter.Announce.enable
-#         Description: Announces Module when player logs in.
-#         Default:    0 - (Disabled)
-#                     1 - (Enabled)
 
 Skip.Deathknight.Starter.Announce.enable = 1
 
@@ -4440,6 +4436,27 @@ CrossFactionBattlegrounds.ReplaceLanguages = 1
 #
 
 CrossFactionBattlegrounds.ReplaceRacials = 0
+
+#
+###################################################################################################
+#Trinitycore Racial Trait Swap NPC  #
+#####################################
+#
+#    Trinitycore Racial Trait NPC
+#        For a cost, you can swap our you current racial traits for that of another.
+#
+#    Trinitycore.Racial.Trait.Swap.Announce.enable
+#         Description: Announces Module when player logs in.
+#         Default:    0 - (Disabled)
+#                     1 - (Enabled)
+Trinitycore.Racial.Trait.Swap.Announce.enable = 1
+#
+#    Racial.Traits.Swap.Gold
+#         Description:  Cost in gold for Racial Trait Exchange.
+#         Default:    0 - (Zero Gold Free)
+#                     10 - (Ten Gold Cost)
+
+Racial.Traits.Swap.Gold = 10
 
 #
 ###################################################################################################

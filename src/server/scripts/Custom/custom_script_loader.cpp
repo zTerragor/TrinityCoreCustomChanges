@@ -18,6 +18,8 @@
 // This is where scripts' loading functions should be declared:
 
 
+void AddSC_racial_traits_npc();
+
 void AddCustomScripts();
 void AddLfgSoloScripts();
 void AddSolocraftScripts();
@@ -32,4 +34,5 @@ void AddSC_CrossfactionBattlegrounds();
     AddSC_skip_StarterArea();
     AddSC_npc_teleport();
 	AddSC_CrossfactionBattlegrounds();
+	AddSC_racial_traits_npc();
 {
