@@ -417,6 +417,7 @@ Player::Player(WorldSession* session): Unit(true)
 
     m_achievementMgr = new AchievementMgr(this);
     m_reputationMgr = new ReputationMgr(this);
+    m_antiCheatMgr = new AntiCheatMgr(this);
 
     m_groupUpdateTimer.Reset(5000);
 }
@@ -453,6 +454,7 @@ Player::~Player()
     delete m_runes;
     delete m_achievementMgr;
     delete m_reputationMgr;
+    delete m_antiCheatMgr;
     delete _cinematicMgr;
 
     sWorld->DecreasePlayerCount();
@@ -1745,7 +1747,12 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
         SetSemaphoreTeleportNear(true);
         // near teleport, triggering send MSG_MOVE_TELEPORT_ACK from client at landing
         if (!GetSession()->PlayerLogout())
+        {
             SendTeleportPacket(m_teleport_dest, (options & TELE_TO_TRANSPORT_TELEPORT) != 0);
+
+            // We call this to flag this movement as legal to not have a Teleport Hack detected
+            m_antiCheatMgr->SetAllowedMovement(true);
+        }
     }
     else
     {
@@ -1855,6 +1862,9 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
                     data << m_movementInfo.transport.pos.PositionXYZOStream();
                 else
                     data << m_teleport_dest.PositionXYZOStream();
+
+                // We call this to flag this movement as legal to not have a Teleport Hack detected
+                m_antiCheatMgr->SetAllowedMovement(true);
 
                 SendDirectMessage(&data);
                 SendSavedInstances();
@@ -27019,6 +27029,11 @@ void Player::RemoveSocial()
 {
     sSocialMgr->RemovePlayerSocial(GetGUID());
     m_social = nullptr;
+}
+
+AntiCheatMgr* Player::GetAntiCheat()
+{
+    return m_antiCheatMgr;
 }
 
 std::string Player::GetDebugInfo() const
