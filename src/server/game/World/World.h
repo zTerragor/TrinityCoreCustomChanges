@@ -178,6 +178,7 @@ enum WorldBoolConfigs
     CONFIG_RESPAWN_DYNAMIC_ESCORTNPC,
     CONFIG_REGEN_HP_CANNOT_REACH_TARGET_IN_RAID,
     CONFIG_ALLOW_LOGGING_IP_ADDRESSES_IN_DATABASE,
+<<<<<<< HEAD
 
     // Nemesis Anticheat Bools
     CONFIG_ANTICHEAT_ENABLED,
@@ -193,6 +194,8 @@ enum WorldBoolConfigs
     CONFIG_ANTICHEAT_ANTISWIM_HACK,
     CONFIG_ANTICHEAT_IGNORECONTROL_HACK,
 
+=======
+>>>>>>> parent of 4e913e9c87 (Merge remote-tracking branch 'origin/3.3.5-cfbg' into 3.3.5)
     BOOL_CONFIG_VALUE_COUNT
 };
 

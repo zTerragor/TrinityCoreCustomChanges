@@ -18,21 +18,28 @@
 // This is where scripts' loading functions should be declared:
 
 
+<<<<<<< HEAD
 void AddSC_racial_traits_npc();
 
 void AddCustomScripts();
+=======
+>>>>>>> parent of 4e913e9c87 (Merge remote-tracking branch 'origin/3.3.5-cfbg' into 3.3.5)
 void AddLfgSoloScripts();
 void AddSolocraftScripts();
+void AddCustomScripts();
 void AddSC_AutoBalance()
 void AddSC_skip_StarterArea();
 void AddSC_npc_teleport();
-void AddSC_CrossfactionBattlegrounds();
 {
     AddSolocraftScripts();
     AddLfgSoloScripts();
     AddSC_AutoBalance();
     AddSC_skip_StarterArea();
     AddSC_npc_teleport();
+<<<<<<< HEAD
 	AddSC_CrossfactionBattlegrounds();
 	AddSC_racial_traits_npc();
+=======
+>>>>>>> parent of 4e913e9c87 (Merge remote-tracking branch 'origin/3.3.5-cfbg' into 3.3.5)
 {
+
